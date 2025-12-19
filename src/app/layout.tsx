@@ -7,6 +7,7 @@ import { Providers } from "@/components/providers";
 import { AuthInitializer } from "@/components/auth-initializer";
 import Image from "next/image";
 import { Analytics } from '@vercel/analytics/next';
+import { MigrationBanner } from "@/components/migration-banner";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -88,6 +89,7 @@ export default function RootLayout({
       >
         <Providers>
           <AuthInitializer>
+            <MigrationBanner />
             <OpenAICodexAnimatedBackground />
             <Header />
             <main className="relative min-h-screen">{children}</main>
